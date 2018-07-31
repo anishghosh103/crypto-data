@@ -1,0 +1,153 @@
+$border-color: hsl(0, 0%, 85%);
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.75rem;
+
+  h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: #9a63ea;
+  }
+}
+
+.form {
+  text-align: center;
+
+  input[type="text"] {
+    padding: 0.75rem 1rem;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid hsl(0, 0%, 95%);
+    background: hsl(0, 0%, 95%);
+    outline: none;
+    font-size: 1.05rem;
+    border-radius: 4px;
+
+    &:focus {
+      transition: all .2s ease-in-out;
+      border: 2px solid #6e7cd6;
+      background: white;
+    }
+  }
+}
+
+@media all and (max-width: 576px) {
+  header {
+    padding: 1rem 1.25rem;
+
+    h1 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  header {
+    flex-direction: column;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+  }
+  .form {
+    display: flex;
+    width: calc(100% - 1.25rem);
+
+    input[type="text"] {
+      flex: 1;
+    }
+  }
+}
+
+.wrapper {
+  flex: 1;
+  width: 100%;
+  overflow: auto;
+  background: hsl(0, 0%, 97%);
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  user-select: none;
+  color: #22292f;
+}
+
+tr {
+  transition: all .1s ease-in-out;
+}
+tr:hover {
+  background: hsl(0, 0%, 95%);
+  cursor: default;
+}
+
+th {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  background: hsl(0, 0%, 95%);
+  padding: 0.5rem 0.75rem;
+  
+  &:hover {
+    cursor: pointer;
+    background: hsl(0, 0%, 90%);
+
+    .icon {
+      display: block;
+    }
+  }
+}
+
+td {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  padding: 0.75rem;
+}
+
+th, td {
+  border: 1px solid $border-color;
+  white-space: nowrap;
+}
+
+td, th, .right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9a63ea;
+    border-bottom-color: #9a63ea;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
