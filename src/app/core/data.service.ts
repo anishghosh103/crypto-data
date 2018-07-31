@@ -19,7 +19,7 @@ export class DataService {
 
   getData() {
     return new Promise((resolve, reject) => {
-      this.http.get('http://coincap.io/front').subscribe(
+      this.http.get('https://coincap.io/front').subscribe(
         resolve, reject
       );
     });
