@@ -6,4 +6,4 @@ The project is hosted on Heroku. [Click Here](https://crypto-cap.herokuapp.com) 
 
 ### Built With
 1. Angular 6
-2. (coincap.io API)[https://github.com/CoinCapDev/CoinCap.io]
+2. [coincap.io API](https://github.com/CoinCapDev/CoinCap.io)
